@@ -5,13 +5,13 @@ namespace LoginRegistration.Models
 {
     public class LoginUser
     {
+        [Required(ErrorMessage="Please enter your login email address")]
         [Display(Name="Email")]
-        [Required]
         public string LoginEmail { get; set; }
 
+        [Required(ErrorMessage="Please enter your login password")]
         [Display(Name="Password")]
         [DataType(DataType.Password)]
-        [Required]
         public string LoginPassword { get; set; }
     }
 }
